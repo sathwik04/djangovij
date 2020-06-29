@@ -134,3 +134,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sathwikthop@gmail.com'
 EMAIL_HOST_PASSWORD = 'sathwik404'
 
+import  dj_database_url
+db_from_env=dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
