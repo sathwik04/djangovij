@@ -1,0 +1,64 @@
+{%  extends 'main/main.html' %}
+
+{% block content %}
+
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>Welcome to MonthBills Activity</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<div class="col-md-10">
+		<h5></h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary" href="">RoomBills</a>
+			<table class="table table-sm">
+				<tr>
+					<th>Customer</th>
+					<th>Bills</th>
+					<th>price</th>
+                    <th>DateCreated</th>
+
+				</tr>
+                 {% for bill in bills %}
+                <tr>
+                    <td>{{bill.customer}}</td>
+                    <td>{{bill.bills}}</td>
+                    <td>{{bill.price}}</td>
+                    <td>{{bill.date_created}}</td>
+
+
+                </tr>
+                 {% endfor %}
+
+
+			</table>
+		</div>
+	   </div>
+		<br>
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3" id="total-customers">
+			  	<div class="card-header">
+			  		<h6 class="card-title">Remaining Balance</h6>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title">{{eo}}</h3>
+
+
+					<h3 class="card-title">
+					<h3 class="card-title">{{flag}}</h3>
+
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+ {% endblock content %}
