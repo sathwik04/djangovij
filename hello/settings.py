@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hysh#fu+uk8=sxt4^fhca++6v-7q%y9$83^g15ne4(%lobf+l5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,6 +128,8 @@ STATIC_URL = '/static/'
 MEDIA_URL='/images/'
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 #SMTP Configuration
 
