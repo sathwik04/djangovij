@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
+import  dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,7 @@ SECRET_KEY = 'hysh#fu+uk8=sxt4^fhca++6v-7q%y9$83^g15ne4(%lobf+l5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["murmuring-atoll-34051.herokuapp.com"]
+ALLOWED_HOSTS = ['murmuring-atoll-34051.herokuapp.com']
 
 
 # Application definition
@@ -81,8 +82,13 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dqmqic36gdgdu',
+        'HOST':'ec2-50-19-26-235.compute-1.amazonaws.com',
+        'PORT':'5432',
+        'USER':'dnpkkxicyjdaxx',
+        'PASSWORD':'c7c6ff7aedbc2d3ffc7a639581d393e5b926126ab36ac68f0f6f1037897eff2'
+
     }
 }
 
@@ -140,7 +146,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sathwikthop@gmail.com'
 EMAIL_HOST_PASSWORD = 'sathwik404'
 
-import  dj_database_url
+
+
 db_from_env=dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
