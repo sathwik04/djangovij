@@ -13,9 +13,11 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 import django_heroku
 import  dj_database_url
+import psycopg2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +29,7 @@ SECRET_KEY = 'hysh#fu+uk8=sxt4^fhca++6v-7q%y9$83^g15ne4(%lobf+l5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['fathomless-caverns-65239.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'import_export',
     'cycle',
     'django_filters',
+    'whitenoise.runserver_nostatic',
 
 ]
 
@@ -82,12 +85,9 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dqmqic36gdgdu',
-        'HOST':'ec2-50-19-26-235.compute-1.amazonaws.com',
-        'PORT':'5432',
-        'USER':'dnpkkxicyjdaxx',
-        'PASSWORD':'c7c6ff7aedbc2d3ffc7a639581d393e5b926126ab36ac68f0f6f1037897eff2'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+
 
     }
 }
@@ -133,8 +133,10 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL='/images/'
 
-STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 
 #SMTP Configuration
@@ -148,7 +150,19 @@ EMAIL_HOST_PASSWORD = 'sathwik404'
 
 
 
-db_from_env=dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
-django_heroku.settings(locals())
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
+        },
+    },
+}
