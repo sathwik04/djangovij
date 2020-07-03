@@ -27,7 +27,7 @@ SECRET_KEY = 'hysh#fu+uk8=sxt4^fhca++6v-7q%y9$83^g15ne4(%lobf+l5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['murmuring-atoll-34051.herokuapp.com']
+ALLOWED_HOSTS = ['fathomless-caverns-65239.herokuapp.com']
 
 
 # Application definition
