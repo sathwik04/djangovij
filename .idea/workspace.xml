@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8283a9c-764e-46cd-89cf-3e03b2b5e414" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="c8283a9c-764e-46cd-89cf-3e03b2b5e414" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/hello/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+              <caret line="167" column="1" lean-forward="true" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
               <folding>
                 <element signature="e#306#315#0" expanded="true" />
               </folding>
@@ -287,17 +283,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="proc" />
     <option name="LAST_COMMIT_MESSAGE" value="proc" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hello/settings.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cycle/templates/main/deletebill.html">
@@ -585,7 +570,7 @@
     <entry file="file://$PROJECT_DIR$/hello/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <caret line="167" column="1" lean-forward="true" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
           <folding>
             <element signature="e#306#315#0" expanded="true" />
           </folding>
