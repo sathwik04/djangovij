@@ -27,9 +27,9 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'hysh#fu+uk8=sxt4^fhca++6v-7q%y9$83^g15ne4(%lobf+l5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['scenic-biscayne-53525.herokuapp.com']
 
 
 # Application definition

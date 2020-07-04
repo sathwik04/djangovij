@@ -43,7 +43,7 @@ def loginform(request):
            user=authenticate(request,username=username,password=password)
            if user is not None:
                 login(request,user)
-                return redirect('home')
+                return redirect('/')
            else:
                messages.info(request,'Username or Password was incorrect')
         context={}
@@ -230,7 +230,7 @@ def monthbills(request):
         now = date.today()
     if group == 'customers':
 
-        if  now.day == 4:
+        if  now.day == 3:
             bills.delete()
             sub=0
             return render(request, 'main/monthbills1.html', context)
