@@ -27,6 +27,8 @@ urlpatterns = [
     path('export/', views.export, name="export"),
     path('resultdata/',views.resultdata,name="resultdata"),
     path('contact/', views.contactus, name="contactus"),
+    path('billschart/', views.billschart, name="billschart"),
+
 
 
     path('reset_password/',
@@ -44,5 +46,6 @@ urlpatterns = [
     path('reset_password_complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name="main/passwordresetdone.html"),
          name="password_reset_complete"),
+    ]
 
-]
+

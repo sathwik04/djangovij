@@ -314,6 +314,6 @@ def contactus(request):
             return redirect('/')
 
     else:
-
-
         return render(request,'main/contactform.html',{'form': form})
+def billschart(request):
+    return render(request,'main/barchat.html')
